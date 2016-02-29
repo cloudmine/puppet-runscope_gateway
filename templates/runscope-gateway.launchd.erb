@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.runscope.gateway</string>
+    <key>UserName</key>
+    <string><%= scope.lookupvar('runscope_gateway::user') %></string>
+    <key>GroupName</key>
+    <string><%= scope.lookupvar('runscope_gateway::group') %></string>
+    <%- unless scope.lookupvar('runscope_gateway::service_enable') -%>
+    <key>Disabled</key>
+    <true/>
+    <%- end -%>
+    <key>RunAtLoad</key>
+    <true/>
+    <key>KeepAlive</key>
+    <true/>
+    <key>ProgramArguments</key>
+    <array>
+        <string><%= scope.lookupvar('runscope_gateway::install_dir') %>/<%= scope.lookupvar('runscope_gateway::install_binary') %></string>
+        <string>-f</string>
+        <string><%= scope.lookupvar('runscope_gateway::config_dir') %>/gateway.conf</string>
+    </array>
+</dict>
+</plist>

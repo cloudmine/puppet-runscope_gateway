@@ -1,0 +1,13 @@
+description "Runscope Gateway Agent"
+
+start on runlevel [2345]
+stop on runlevel [06]
+
+setuid <%= scope.lookupvar('runscope_gateway::user') %>
+setgid <%= scope.lookupvar('runscope_gateway::group') %>
+
+exec <%= scope.lookupvar('runscope_gateway::install_dir') %>/<%= scope.lookupvar('runscope_gateway::install_binary') %> -f <%= scope.lookupvar('runscope_gateway::config_dir') %>/gateway.conf
+
+respawn
+respawn limit 10 10
+kill timeout 10

@@ -1,0 +1,11 @@
+[Unit]
+Description=Runscope Gateway Agent
+After=network.target
+
+[Service]
+User=<%= scope.lookupvar('runscope_gateway::user') %>
+Group=<%= scope.lookupvar('runscope_gateway::group') %>
+ExecStart=<%= scope.lookupvar('runscope_gateway::install_dir') %>/<%= scope.lookupvar('runscope_gateway::install_binary') %> -f <%= scope.lookupvar('runscope_gateway::config_dir') %>/gateway.conf
+
+[Install]
+WantedBy=multi-user.target

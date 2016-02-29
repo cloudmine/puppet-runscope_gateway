@@ -1,0 +1,19 @@
+token=<%= @token %>
+hostname=<%= @hostname %>
+<%- if @interface -%>
+interface=<%= @interface %>
+<%- end -%>
+<%- if @https -%>
+https
+https-port=<%= @https_port %>
+certfile=<%= @certfile %>
+keyfile=<%= @keyfile %>
+<%- else -%>
+https=false
+<%- end -%>
+<%- if @http -%>
+http
+http-port=<%= @http_port %>
+<%- else -%>
+http=false
+<%- end -%>

@@ -1,0 +1,8 @@
+---
+:hierarchy:
+    - runscope_gateway/common
+    - common
+:backends:
+    - yaml
+:yaml:
+    :datadir: 'data'

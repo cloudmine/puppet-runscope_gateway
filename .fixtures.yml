@@ -1,0 +1,10 @@
+fixtures:
+  forge_modules:
+    archive:
+      repo: "puppet/archive"
+      ref: "0.4.4"
+    stdlib:
+      repo: "puppetlabs/stdlib"
+      ref: "4.11.0"
+  symlinks:
+    runscope_gateway: "#{source_dir}"
