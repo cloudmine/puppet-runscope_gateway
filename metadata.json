@@ -1,12 +1,17 @@
 {
   "name": "cloudmine-runscope_gateway",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "author": "CloudMine Inc.",
   "summary": "Puppet module for Runscope Gateway Agent",
   "license": "MIT",
-  "source": "https://github.com/cloudmine/puppet-runscope_agent",
-  "project_page": "https://github.com/cloudmine/puppet-runscope_agent",
-  "issues_url": "https://github.com/cloudmine/puppet-runscope_agent/issues",
+  "source": "https://github.com/cloudmine/puppet-runscope_gateway",
+  "project_page": "https://github.com/cloudmine/puppet-runscope_gateway",
+  "issues_url": "https://github.com/cloudmine/puppet-runscope_gateway/issues",
+  "tags": [
+    "monitoring",
+    "runscope",
+    "runscope-gateway"
+  ],
   "dependencies": [
     {
       "name": "puppet/archive",
@@ -21,7 +26,7 @@
     {
       "operatingsystem": "CentOS",
       "operatingsystemrelease": [
-        "6"
+        "7"
       ]
     },
     {
@@ -29,12 +34,6 @@
       "operatingsystemrelease": [
         "14.04"
       ]
-    }
-  ],
-  "requirements": [
-    {
-      "name": "puppet",
-      "version_requirement": "3.x"
     }
   ]
 }
